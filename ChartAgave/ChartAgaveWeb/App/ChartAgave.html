@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html id="chartAgaveDocument" dir="auto">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title></title>
+	<link href="../Content/vuePlot.css" rel="stylesheet" />
+	<link href="../Content/Office.css" rel="stylesheet" type="text/css" />
+	<link href="../Content/Switch.css" rel="stylesheet" />
+	<link href="../Content/PeopleGraph.css" rel="stylesheet" type="text/css" id="app-css" />
+	<link href="../PeopleAssets/Themes/giant-redwhiteblack.css" rel="stylesheet" type="text/css" id="chart-theme" />
+	<link href="../Content/OfficeThemes.css" rel="stylesheet" />
+	<link href="../Content/AgaveBase.css" rel="stylesheet" />
+	<link href="../Content/ExcelChartAgave.css" rel="stylesheet" id="chartAgaveTheme" />
+    <!--<link href="../Content/HighContrast.css" rel="stylesheet" />-->
+
+	<script src="../Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+	<script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js" type="text/javascript"></script>
+	<script src="../Scripts/vuePlot.js"></script>
+	<script src="../Scripts/d3.v3.min.js"></script>
+	<script src="../Scripts/OfficeThemeManager.js"></script>
+    <script src="../Scripts/OfficeAgave.Shared.js"></script>
+	<script src="../Scripts/PeopleGraph.js"></script>
+	<script src="ChartAgave.js"></script>
+</head>
+<body id="chartAgavContainer" class="default-bgColor">
+	<!--settings panel-->
+	<div id="settingsPanel">
+		<div class="pane-container">
+			<div class="topBanner">
+                <div id="settingsBackButton" class="backBtn back-button" data-resx="title: back">
+                    <img src="../Icons/Back.svg" class="back-icon" />
+                </div>
+				<div class="title" data-resx="text: settings"></div>
+			</div>
+            <div class="settings-content settings-content-margin" id="tabs">
+                <div id="tabs-1">
+                    <ul>
+                        <li>
+                            <label class="settings-label settingpane-text-overflow" data-resx="text: title"></label>
+                            <textarea tabindex="1" rows="3" class="settings-text settings-title-text settings-area text-area" data-resx="placeholder: CHART_TITLE"></textarea>
+                        </li>
+                        <li>
+                            <label class="settingpane-text-overflow" data-resx="text: show_values "></label>
+                            <div data-office-control="win.office.switch" class="office-switch" id="showValueSwitch"></div>
+                        </li>
+                        <li>
+                            <label class="settingpane-text-overflow" data-resx="text: show_grid"></label>
+                            <div data-office-control="win.office.switch" class="office-switch" id="showGridSwitch"></div>
+                        </li>
+                        <li>
+                            <label class="settingpane-text-overflow" data-resx="text: x_axis"></label>
+                            <input tabindex="1" type="text" class="settings-text x-axis text-box" data-resx="placeholder: X_AXIS" />
+                        </li>
+                        <li>
+                            <label class="settingpane-text-overflow" data-resx="text: y_axis"></label>
+                            <input tabindex="1" type="text" class="settings-text y-axis text-box" data-resx="placeholder: Y_AXIS" />
+                        </li>
+                        <li>
+                            <label class="settingpane-text-overflow" data-resx="text: label"></label>
+                            <input tabindex="1" type="text" class="settings-text chart-label text-box" data-resx="placeholder: LABEL" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="settings-content" style="display:none" id="peopleTabs">
+                <ul class="settings-content-margin">
+                    <li><a href="#tabs-people-1" class="sub-title text-overflow active-color" data-resx="text: basic"></a></li>
+                    <li><a href="#tabs-people-2" class="sub-title text-overflow" data-resx="text: type"></a></li>
+                    <li><a href="#tabs-people-3" class="sub-title text-overflow" data-resx="text: theme"></a></li>
+                </ul>
+                <div id="tabs-people-1" class="settings-content-margin">
+                    <label class="settings-label settingpane-text-overflow" data-resx="text: title"></label>
+                    <textarea rows="3" class="settings-area people-title-area text-area" data-resx="placeholder: CHART_TITLE"></textarea>
+                    <label class="settings-label settingpane-text-overflow" data-resx="text: shape"></label>
+                    <div class="sharp-list"></div>
+                </div>
+                <div id="tabs-people-2" class="settings-content-margin">
+                    <div class="people-types"></div>
+                </div>
+                <div id="tabs-people-3" class="settings-content-margin">
+                    <div class="people-theme"></div>
+                </div>
+            </div>
+		</div>
+	</div>
+
+	<!--toolbar-->
+	<div id="toolbar">
+        <div id="toolbarSettings" data-resx="title: settings">
+            <img src="../Icons/Setting.svg" class="icons-size" />
+        </div>  
+        <div  id="toolbarData" data-resx="title: data">
+            <img src="../Icons/Data.svg" class="icons-size" />
+        </div>     
+        <div id="toolbarChartType" data-resx="title: chart_type">
+            <img src="../Icons/graph_normal.svg" class="icons-size" />
+        </div>       
+	</div>
+
+	<!--content-->
+	<div id="content">
+		<div class="contentPage" id="contentChartPage"></div>
+		<div class="contentPage" id="contentChartTypePage"></div>
+		<div class="contentPage" id="contentDataPage"></div>
+	</div>
+</body>
+</html>

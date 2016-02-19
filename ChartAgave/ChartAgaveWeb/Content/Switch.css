@@ -1,0 +1,91 @@
+﻿
+.office-switch{
+   width:180px;
+   height:19px;
+   position:relative;
+   display:inline-block;
+   padding:4px 0;
+}
+
+    .office-switch label {
+        width:100px;
+        display:inline-block;
+        font-size:15px;
+        font-weight:600;
+        margin-right:20px;
+        overflow: hidden;
+        /*white-space: nowrap;
+        text-overflow: ellipsis;*/
+    }
+
+    .office-switch .switch-container {
+        display:inline-block;
+        position:relative;
+        border:2px solid #b3b3b3;
+        border-radius:1px;
+        padding:2px;
+        margin:0;
+        float:left;
+    }
+
+.office-switch .slider-bar{
+   width:42px;
+   height:11px; 
+   display:inline-block;
+   background-color:#d8d8d8;
+   border-radius:1px;  
+   float:left;
+}
+
+.office-switch .sliderbar-on{
+    background-color:#a4d6b8;
+}
+
+.office-switch .on{    
+    left: auto !important;
+    right: -1px !important;
+    border-top-right-radius:1px;
+    border-bottom-right-radius:1px;
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;
+}
+
+.office-switch .switch{
+   width:12px;
+   height:19px;
+   top:-2px; 
+   background-color:#666666;
+   display:inline-block;
+   position:absolute; 
+   left:-1px;
+   right:auto; 
+   border-top-left-radius:1px;
+   border-bottom-left-radius:1px;
+}
+    .office-switch .switch:hover {
+         background-color:#666666;
+    }
+
+    .office-switch .switch:active {
+         background-color:#333333;
+    }
+
+.office-switch .keyboard-switch-container{
+    display:inline-block;
+    border:1px dotted transparent;  
+    padding:2px;
+}
+.office-switch .keyboard-switch-container:focus{
+    border-color: #767676;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    /* All high contrast styling rules */
+    .office-switch .switch{
+        border:1px solid #ffff00;
+        height:17px;   
+    }
+}
+
+
+

@@ -1,0 +1,24 @@
+﻿@media screen and (-ms-high-contrast: active) {
+    /* All high contrast styling rules */
+  /*div{
+      color:#ffff00;
+  }*/
+
+  .horizontal-select-grip,
+  .vertical-select-grip,
+  .horizontal-select-grip-selected,
+  .vertical-select-grip-selected,
+  #selectAll,
+  #selectDataBtn, 
+  #tableToolbar .toolbar-icon,
+  .editingInput,
+  #selectDataDiv{
+      border:1px solid #ffff00;
+  }
+}
+@media screen and (-ms-high-contrast: black-on-white) {
+  
+}
+@media screen and (-ms-high-contrast: white-on-black) {
+  
+}

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title></title>
+</head>
+<body>
+	<div>
+		<div class="topBanner">
+            <div id="dataBackBtn" class="backBtn" data-resx="title: back">
+                <img src="../Icons/Back.svg" class="back-icon" />
+            </div>
+			<div class="title" data-resx="text: data"></div>
+		</div>
+		<div id="tableToolbar">
+			<div id="selectDataBtn" class="" data-resx="title: select_your_data">
+                <img src="../Icons/SelectData.png" />
+                <label class="text-overflow" data-resx="text: select_your_data"></label>
+            </div>
+			<div id="firstSeparator" class="toolbar-separator"></div>
+			<img class="toolbar-icon" id="showColumnHeader" src="../Icons/ShowColumnHeaders.png" data-resx="title: toggle_column_header" />
+			<img class="toolbar-icon" id="showRowHeader" src="../Icons/ShowRowHeaders.png" data-resx="title: toggle_row_header" />
+			<div id="secondSeparator" class="toolbar-separator"></div>
+			<img class="toolbar-icon toolbar-icon-hidden" id="addColumnLeft" src="../Icons/InsertColumnsLeft.png" data-resx="title: insert_left" />
+			<img class="toolbar-icon toolbar-icon-hidden" id="addColumnRight" src="../Icons/InsertColumnsRight.png" data-resx="title: insert_right" />
+			<img class="toolbar-icon toolbar-icon-hidden" id="deleteColumn" src="../Icons/DeleteColumns.png" data-resx="title: delete_columns" />
+			<img class="toolbar-icon toolbar-icon-hidden" id="addRowAbove" src="../Icons/InsertRowsAbove.png" data-resx="title: insert_above" />
+			<img class="toolbar-icon toolbar-icon-hidden" id="addRowBelow" src="../Icons/InsertRowsBelow.png" data-resx="title: insert_below" />
+			<img class="toolbar-icon toolbar-icon-hidden" id="deleteRow" src="../Icons/DeleteRows.png" data-resx="title: delete_rows" />
+			<div id="thirdSeparator" class="toolbar-separator"></div>
+			<img class="toolbar-icon" id="showExternalColumnHeader" src="../Icons/ShowColumnHeaders.png" data-resx="title: toggle_column_header" />
+			<img class="toolbar-icon" id="showExternalRowHeader" src="../Icons/ShowRowHeaders.png" data-resx="title: toggle_row_header" />
+		</div>
+		<div id="tableFrame">
+			<div id="dataTableDiv">
+				<div id="horizontalSelectedGrip" class="horizontal-select-grip-selected">
+					<div class="horizontal-resize-handler"></div>
+				</div>
+				<div id="verticalSelectedGrip" class="vertical-select-grip-selected">
+					<div class="vertical-resize-handler"></div>
+				</div>
+				<img class="insert-colomn-icon" id="insertColumnLeft" src="../Icons/insert_column_left_rest.png" data-resx="title: insert_left" />
+				<img class="insert-colomn-icon" id="insertColumnRight" src="../Icons/insert_column_right_rest.png" data-resx="title: insert_right" />
+				<img class="insert-row-icon" id="insertRowAbove" src="../Icons/insert_row_above_rest.png" data-resx="title: insert_above" />
+				<img class="insert-row-icon" id="insertRowBelow" src="../Icons/insert_row_below_rest.png" data-resx="title: insert_below" />
+				<div id="selectAll" class="select-all" />
+			</div>
+		</div>
+		<div id="tableFrameBackground"></div>
+		<div id="tableFramePopup">
+			<div id="tableFramePopupDiv1">
+				<img src="../Icons/Info.png" />
+				<label data-resx="text: DisconnectDataConnectionMessage"></label>
+			</div>
+			<div id="tableFramePopupDiv2">
+				<input id="enableTableBtn" type="button" value="Disconnect data connection" data-resx="value: " />
+			</div>
+		</div>
+		<div id="dataSelectionBackground"></div>
+		<div id="selectDataDiv">
+			<h1 id="selectDataDivTitle" class="text-overflow" data-resx="text: SelectDataNotes"></h1>
+			<!--<div id="selectDataWarningMessage">
+				<img src="../Icons/warning.png" />
+				<h1 data-resx="text: SelectDataWarning"></h1>
+			</div>-->
+            <div id="selectDataDivDescription" class="text-overflow"  data-resx="text: sample_data"></div>
+			<div class="select-data-container">
+                <table id="selectDataDiv_table" cellspacing="0">
+                    <tr>
+                        <td></td>
+                        <td data-resx="text: series1"></td>
+                        <td data-resx="text: series2"></td>
+                        <td data-resx="text: series3"></td>
+                    </tr>
+                    <tr>
+                        <td data-resx="text: category1"></td>
+                        <td>4.3</td>
+                        <td>2.4</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td data-resx="text: category2"></td>
+                        <td>2.5</td>
+                        <td>4.4</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td data-resx="text: category3"></td>
+                        <td>3.5</td>
+                        <td>1.8</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td data-resx="text: category4"></td>
+                        <td>4.5</td>
+                        <td>2.8</td>
+                        <td>5</td>
+                    </tr>
+                </table>
+			</div>
+			<div id="selectionTip" class="text-overflow" data-resx="text: SelectionTip"></div>
+			<div id="selectdatadiv_bottom">
+                <input id="selectDataDivCreateBtn" class="blueBtn" type="button" disabled="disabled" data-resx="value: create" />
+				<input id="selectDataDivCancelBtn" class="blueBtn enabled-button" type="button" data-resx="value: cancel" />
+			</div>
+		</div>
+	</div>
+	<div id="copyPasteDiv" style="position: fixed; top:-10000px; left: -10000px;">
+		<textarea class="copyPaste" style="width:10000px; height: 10000px; overflow: hidden; opacity: 0"></textarea>
+	</div>
+</body>
+</html>

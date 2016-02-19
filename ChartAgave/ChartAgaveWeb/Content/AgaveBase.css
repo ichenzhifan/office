@@ -1,0 +1,707 @@
+﻿/*********Common*******/
+body {
+	overflow-x: hidden;
+    font-weight: lighter;
+    font-family: 'Segoe UI Semilight','Segoe UI Web Semilight','Segoe UI Web Regular','Segoe UI','Segoe UI Symbol','HelveticaNeue-Medium','Helvetica Neue',Arial,sans-serif;
+}
+
+.default-bgColor {
+	background-color: #fff;
+}
+
+#toolbar {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	width: 141px;
+	/*height: 50px;*/
+	left: 0px;
+	top: 0px;
+	/*padding-right: 20px;*/
+    margin:24px 24px 0px 24px;
+	background-color: transparent;
+}
+
+	#toolbar div {
+		float: right;
+		margin-right: 15px;		
+		/*width: 32px;
+		height: 32px;*/
+	}
+
+.circle {  
+   border-radius:12px;
+   border:1px solid #434343;     
+   background-color:#fff;
+   float:right;
+}
+
+.circle:hover{
+    border-color:#86BFA0;  
+}
+
+.circle:active{
+    border-color:#217346;  
+}
+
+.text-box {
+	height: 32px;
+	margin-top: 2px;
+	border-radius: 1px;   
+    font-size:15px;
+}
+
+.text-area {
+	margin: 2px 7px 0px 2px;
+	border-radius: 1px;
+    font-size:15px;
+}
+
+	.text-area:active,
+	.text-area:hover,
+	.text-box:active,
+	.text-box:hover {
+		border-color: #a8d0b9;
+	}
+
+#settingsPanel {
+	display: none;
+	position: absolute;
+	z-index: 9;
+	width: 220px;
+	height: 100%;
+	top: 0px;
+	background-color: white;
+}
+
+.pane-container{
+    margin:0px 24px;
+}
+#content {
+	/*background: #fff;*/
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.contentPage {
+	/*background: #fff;*/
+	z-index: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    height:100%;
+}
+
+.topBanner {
+	display: inline-block;
+    margin:24px 0px 0px 24px;
+}
+
+.icons-size{
+    width: 32px;
+	height: 32px;	
+}
+
+	.topBanner .backBtn {
+		float: left;
+		margin-right:15px;	
+        width:24px;
+        height:24px;	
+	}   
+
+	.topBanner .title {
+		font-size: 20px;
+		float:left;
+		height: 30px;
+		color: #262626;	
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;		
+	}
+
+	.topBanner #selectDataBtn {
+		float: left;
+		margin-left: 340px;
+		margin-top: 6px;
+		padding: 3px 25px;
+	}
+
+    #settingsBackButton{
+        margin-left:-24px;
+    }
+
+    #selectChartTypeBtn{
+        margin:0px;
+    }
+input.blueBtn,
+.blueBtn {
+	font-size: 15px;
+	min-width: 90px;
+    max-width: 120px;
+	height: 32px;
+	cursor: pointer;
+	margin: 10px;
+	padding: 5px 13px 10px 13px;
+	border: 1px dashed transparent;
+	background-color: #217346;
+	color: #fff;
+	border-radius: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display:inline-block;
+}
+
+	input[type='button'].blueBtn:enabled:hover,
+	.blueBtn:enabled:hover {
+		background-color: #439467;
+        border-color:none;
+	}
+
+	input[type='button'].blueBtn:disabled,
+	.blueBtn:disabled {
+		background-color: #94b9a5 ;
+		cursor: default;
+	}
+
+	input[type='button'].blueBtn:enabled:active,
+	.blueBtn:enabled:active {
+		background-color: #0A6332 ;
+        border-color:none;
+	}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.hidden {
+	display: none;
+}
+
+.chartType-content ul > li.actived,
+.actived {
+	/*background-color: #fde6da;*/
+	border: 1px solid #a1c0e0;
+}
+
+.unactived {
+	background-color: #fff;
+}
+
+.bottom-Bar {
+	/*position: absolute;*/
+	bottom: 0px;
+	width: 100%;	
+}
+
+.settings-content {
+	width: 190px;
+	margin: 0 auto;
+}
+
+.settings-content-margin {
+    /*margin: 10px 0px 5px 0px;*/
+}
+	.settings-content ul {
+		list-style: none;		
+	}
+
+		.settings-content ul > li {
+			margin: 5px 0px;
+			clear: both;
+		}
+
+			.settings-content ul > li:last-child {
+				margin: 10px 0px 0px 0px;
+			}
+
+	.settings-content label {
+		vertical-align: top;
+		font-size: 15px;
+		color: #555;
+	}
+
+	.settings-content input.settings-text {
+		width: 166px;
+		display: block;
+	}
+
+.settingpane-text-overflow{   
+    max-width: 170px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display:inline-block;
+}
+
+.text-overflow{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display:inline-block;
+}
+
+label.settings-label {
+	display: block;
+    margin:4px 11px 0px 0px;
+}
+
+textarea.settings-area {
+	width: 166px;
+	overflow: auto;
+}
+
+#peopleTabs >ul{
+    margin:0px 0px 12px 0px;
+}
+
+/*********End Common*******/
+
+/**********Begin toolbar**************/
+/*#toolbarSettings{
+    background:url("../Icons/Setting.svg") no-repeat;
+}
+
+#toolbarSettings:focus,
+#toolbarSettings:hover{
+    background:url("../Icons/Setting_hover.svg") no-repeat;
+}
+
+#toolbarSettings:active{
+    background:url("../Icons/Setting_press.svg") no-repeat;
+}
+
+#toolbarData{
+    background:url("../Icons/Data.svg") no-repeat;
+}
+
+#toolbarData:focus,
+#toolbarData:hover{
+    background:url("../Icons/Data_hover.svg") no-repeat;
+}
+
+#toolbarData:active{
+    background:url("../Icons/Data_press.svg") no-repeat;
+}
+
+#toolbarChartType{
+    background:url("../Icons/graph_normal.svg") no-repeat;
+}
+
+#toolbarChartType:focus,
+#toolbarChartType:hover{
+    background:url("../Icons/graph_hover.svg") no-repeat;
+}
+
+#toolbarChartType:active{
+    background:url("../Icons/graph_press.svg") no-repeat;
+}*/
+
+
+/**********End toolbar**************/
+
+/*********Begin switch control*******/
+#showValueSwitch,
+#showGridSwitch {
+	margin: 3px 0px 0px 0px;
+}
+
+.chart-colors-panel {
+	margin-right: 5px;
+	min-height: 100px;
+	max-height: 150px;
+	background-color: #434343;
+	position: relative;
+}
+
+.color-label {
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	margin: 5px 0px;
+}
+
+.color-reset-btn {
+	background-color: transparent;
+	border: 0px;
+	font-size: 12px;
+	color: #3291c3;
+	position: absolute;
+	bottom: 5px;
+	display: inline-block;
+	border-bottom: 1px solid #434343;
+}
+
+	.color-reset-btn:hover {
+		color: #fff;
+		border-bottom: 1px solid #fff;
+		cursor: pointer;
+	}
+
+.colors-list {
+	margin-right: 12px;
+	display: table-cell;
+	min-height: 50px;
+	vertical-align: middle;
+}
+
+div.vpVvPlot {
+	background-color: transparent;
+}
+
+/*********End switch control*******/
+
+/*********Begin tab control*******/
+
+.settings-content .sub-title {
+	font-size: 16px;	
+	float: left;
+	margin: 0px;
+	cursor: pointer;
+	position: relative;
+	padding: 2px 4px;
+	color: #666666;
+    border:1px dotted transparent;
+    max-width:50px;
+}
+
+.settings-content .sub-title:hover {
+	 color: #262626;
+     border-color:transparent;
+}
+
+    .settings-content .sub-title:focus {        
+         border-color:#262626;
+    }
+
+.settings-content ul {
+	/*padding: 2px 10px;*/
+	list-style: none;
+}
+
+.settings-content > ul > li {
+	display: inline-block;
+	/*padding: 1px 10px;*/
+	margin: 0px;
+}
+
+.settings-content a {
+	text-decoration: none;
+	display: inline-block;
+	/*color: #8f8f8f;
+	font-size: 14px;
+	font-weight: 600;*/
+}
+
+.settings-content > ul > li {
+	/*border-right: 1px solid #8f8f8f;*/
+}
+
+	.settings-content > ul > li:first-child {
+		/*padding-left: 3px;*/
+	}
+
+	.settings-content > ul > li:last-child {
+		/*border-right: 0px;
+		padding-left: 8px;*/
+	}
+
+.default-color {
+	color: #8f8f8f;
+}
+
+.settings-content a.active-color {
+	color: #228753;
+    font-family: 'Segoe UI', Arial, Verdana, Sans-Serif;
+    outline: 0;
+    border-color:transparent;
+}
+
+.settings-content a.active-color:hover {
+	 color: #0a6332;
+     border-color:transparent;
+}
+
+#tabs-people-2 img {
+	width: 160px;
+}
+
+/*********End tab control*******/
+
+/***********color***********/
+#tabs-2 {
+	overflow: hidden;
+	overflow-y: hidden;
+}
+
+	#tabs-2 span.color-title {
+		background-color: #eeeeee;
+		padding: 5px;
+		margin: 5px 13px;
+		display: block;
+	}
+
+		#tabs-2 span.color-title > label {
+			font-size: 14px;
+		}
+
+	#tabs-2 .color-item {
+		width: 20px;
+		height: 20px;
+		margin: 1px 1px;
+		display: inline-block;
+		float: left;
+	}
+
+.monochromatic > ul {
+	max-height: 120px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#tabs ul {
+	margin: 2px 12px 0px 0px;
+}
+
+#tabs-2 ul {
+	width: 155px;
+	margin: 0 auto;
+}
+
+#tabs-2 li {
+	border: 1px solid #fff;
+	display: inline-block;
+	margin: 0px;
+}
+
+#tabs-1 li {
+	margin: 4px 0px;
+}
+
+#tabs-1 ul {
+	margin: 0px;
+}
+
+#tabs li:hover {
+	border-color: #4472c4;
+}
+
+#tabs-2 li.color-selection {
+	border-color: #4472c4;
+}
+
+/***********end color***********/
+
+/*********People settings***********/
+#peopleTbas > div {
+	margin: 7px 12px;
+}
+
+.sharp-list {
+	margin: 2px 7px 0px 2px;
+}
+
+	.sharp-list img {
+		width: 30px;
+		height: 30px;
+		margin: 1px;
+	}
+
+.people-theme img {
+	width: 75px;
+	margin: 1px;
+}
+
+.sharp-list img,
+.people-theme img,
+.people-types img {
+	border: 2px solid #fff;
+}
+
+img.gallery-item-click {
+	border-color: #228753;
+}
+/*********end People settings***********/
+
+/********Begin welcome box************/
+#welcomePopup {
+	position: absolute;
+	left: 0px;
+	top: 0px;   
+	background: black;
+	opacity: 0.7;
+	color: #fff;   
+    overflow:hidden;
+    font-family:'Segoe UI'; 
+}
+
+.message-container {
+    width: 720px;
+    height:480px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+#welcomePopupTitle {	
+	font-size: 20px; 
+    font-family:'Segoe UI';
+    margin:5px;
+    color:#fff;
+}
+
+#welcomePopupDescription {	
+	font-size: 14px; 
+    font-family:'Segoe UI';
+    margin:5px;
+    color:#fff;
+    padding-top:15px;
+}
+/*******End welcome box*********/
+
+/*******Begin chart *********/
+.chart-container {
+    /*margin:24px;*/
+    /*border:2px solid #d8d8d8;*/
+    min-width:550px;
+    min-height:475px;
+    width:100%;
+    height:100%;
+    display:inline-block;
+}
+
+.chart-sub-container{
+    display:inline-block;
+    margin:24px;
+    border:2px solid #d9d9d9;  
+}
+.peoplechart-sub-container{
+    height:100%;
+}
+
+.chart-ele-padding {
+    padding-left:24px;
+}
+
+#peopleChartTitle{
+    padding:0px;
+    margin:24px;
+}
+
+ .vp-chart-title1 {
+     font-size: 28px;     
+     font-family: Segoe UI Semilight, Calibri;
+     color: #767676;
+     /*padding:24px 24px 0px 24px;*/
+     white-space:nowrap;
+     overflow-x:hidden;
+     text-overflow:ellipsis;
+ }
+
+.vp-chart-title2 {
+    font-size: 14px;     
+    color: #767676;
+    font-family: Segoe UI Semilight, Calibri;
+    padding-top:18px;
+}
+
+.custom-Legend {
+    font-family: 'Segoe UI', Calibri;
+    font-size:12px;
+    color: #767676;
+    padding:24px 0px 24px 24px;
+}
+.color-Square {
+    width: 5px; 
+    height: 12px;    
+    display: inline-block;
+    margin-right:8px;
+    vertical-align:text-bottom;
+}
+
+ .series-Name {
+     /*margin-right: 22px;*/
+     padding:1px 0px;
+     vertical-align:text-bottom;
+ }
+
+.vpVvPlot {
+    /*background: white;*/
+}
+.inactive {
+    opacity: .4;
+}
+
+.legend-Entry {
+    cursor: pointer; 
+    /*background: white;*/ 
+    display: inline-block;   
+    border:1px dashed transparent;   
+    margin-right:22px;
+    padding:1px;
+}
+.legend-Entry:active{
+    border-color:none;
+}
+
+#myChart {
+    padding:0px 15px;
+    /*height:100%;*/
+    /*width:100%;*/ 
+}
+
+.notification-button{
+    right:24px;
+}
+
+/*.title-separator,*/
+.chart-title{
+    display:none;
+}
+/*******End chart*********/
+
+/********Begin keyboard************/
+/*#welcomePopup:hover,
+#welcomePopup:focus{
+    opacity:0.4;
+}*/
+
+.legend-Entry-focus{
+    border-color:#767676;
+}
+
+.chartType-nav-ul>li:focus,
+.chartType-thumbnail-ul>li:focus{
+    /*border: 1px solid #c6c6c6 !important;*/
+    border: 1px solid #a1c0e0 !important;   
+}
+
+input[type='button'].blueBtn:enabled:focus,
+.blueBtn:enabled:focus {
+		background-color: #d5f0e2;
+        border-color:#217346;
+        color:#000;
+	}
+
+ .topBanner .backBtn:focus{		
+        background:url("../Icons/Back_hover.svg") no-repeat;	
+	}
+
+ .text-area:focus,	
+	.text-box:focus {
+		border-color: #a8d0b9;
+	}
+
+  .settings-content .sub-title:focus {       
+         border-color:#262626;
+    }
+/********End keyboard************/

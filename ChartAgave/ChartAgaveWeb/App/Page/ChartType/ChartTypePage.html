@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title></title>
+</head>
+<body>
+	<div class="charttype-container">
+		<div class="topBanner">
+            <div tabindex="4" id="chartType_backBtn" class="backBtn" data-resx="title: back">
+                <img src="../Icons/Back.svg" class="back-icon" />  
+            </div>
+               
+			<div class="title accent-color" data-resx="text: chart_type"></div>
+		</div>
+		<div class="chartType-content">
+			<div class="chartType-nav">
+				<ul class="chartType-nav-ul">
+					<li tabindex="1" class="chartType-column">
+						<img src="../Icons/ColumnChart.png" data-resx="title: column_chart" />
+					</li>
+                    <li tabindex="1" class="chartType-bar">
+                        <img src="../Icons/BarChart.png" data-resx="title: bar_chart" />
+                    </li>
+                    <li tabindex="1" class="chartType-line">
+                        <img src="../Icons/LineChart.png" data-resx="title: line_chart" />
+                    </li>
+                    <li tabindex="1" class="chartType-pie">
+                        <img src="../Icons/PieChart.png" data-resx="title: pie_chart" />
+                    </li>
+                    <li tabindex="1" class="chartType-area">
+                        <img src="../Icons/AreaChart.png" data-resx="title: area_chart" />
+                    </li>
+                    <li tabindex="1" class="chartType-people">
+                        <img src="../Icons/PeopleChart.png" data-resx="title: people_chart" />
+                    </li>
+				</ul>
+			</div>
+			<div class="chartType-panel">
+				<div class="chartType-thumbnail">
+					<ul class="chartType-thumbnail-ul">
+						<li id="thumbnail1">
+                            <img tabindex="2" src="../Icons/column_regular_type.png" id="RegularColumn" data-resx="title: regular_column" />
+						</li>
+						<li id="thumbnail2">
+                            <img tabindex="2" src="../Icons/column_stacked_type.png" id="StackedColumn" data-resx="title: stacked_column" />
+						</li>
+					</ul>
+                    <label class="chartType-thumbnail-name accent-color text-overflow" data-resx="text: regular_column"></label>
+				</div>
+				<div id="chartSample">
+				</div>
+				<svg id="chartTypeCanvasRoot" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="100%">
+				</svg>
+			</div>
+            <div class="bottom-Bar" id="bottomBar">
+                <input tabindex="3" type="button" id="selectChartTypeBtn" class="blueBtn right" data-resx="value: select" />
+            </div>
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,601 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    background: white;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color: black;
+}
+
+/* this removes the ORANGE FOCUS BORDER in Chrome */
+*:focus 
+{
+    outline: 0;
+}
+
+/* CAUTION: to avoid collision with other app style sheets, we should name all vuePLot CSS classes 
+	with the prefix "vp".  This is an ongoing change... (roland, 8/8/2012) */
+
+ /* prevent text and image selection on all browsers (recommend using transparent selection color instead) */
+ /* this doesn't work for IE9 and below, and doesn't work for opera (use vp.disableSelection() for those) */
+ 
+ /* do we still need this? */
+ *.unselectable
+ { 
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none; 
+}
+
+.rubberBand /* used for drag-select in std charts */
+{
+    border: 2px dashed black;
+    /* background: black; */
+    opacity: .5;
+    z-index: 9999;
+    background: transparent;
+}
+
+
+a:link {color: blue; text-decoration: none}     /* unvisited link */
+a:visited {color: blue; text-decoration: none}  /* visited link */
+a:hover {color: blue; text-decoration: underline}    /* mouse over link */
+a:active {color: blue; text-decoration: none}   /* selected link */ 
+a {color: blue; text-decoration: none; cursor: pointer}
+
+a.title:hover {text-decoration: none}    /* mouse over link */
+a.title2:hover {text-decoration: none}    /* mouse over link */
+
+.fastDataGrid
+{
+    font: 10pt Consolas;
+}
+
+.dataGrid
+{
+    border: 1px solid #b0b0b0;
+    background: #f0f0f0;
+    border-spacing: 0;
+    color: black;
+    border-collapse: collapse;
+	width: 100%;
+}	
+
+.dataGridLockedHeader
+{
+    border: 1px solid #b0b0b0;
+    background: #f0f0f0;
+    border-spacing: 0;
+    color: black;
+    border-collapse: collapse;
+}	
+
+.dataGrid .altRow td
+{
+    background: #e0e0e0;
+}
+
+.dataGrid th
+{
+    font-weight: normal;
+	color: #555;
+}
+
+.dataGridLockedHeader .altRow td
+{
+    background: #e0e0e0;
+}
+
+.dataGridLockedHeader th
+{
+    font-weight: normal;
+	color: #555;
+}
+
+
+.vpToolTip
+{
+	position: absolute;
+	background: white;
+	border: solid 1px black;
+	font-family: Tahoma;
+	font-size: 10pt;
+    box-shadow: 4px 4px 4px #808080;
+	z-index: 999;
+	overflow: hidden; 
+	visibility: hidden;
+}
+
+
+
+.vpChartTitle
+{
+    fill: gray;
+    font-size: 14pt;
+}
+
+.vpLegendTitle
+{
+    font-weight: bold;
+}
+
+.vpLegendText
+{
+    fill: gray;
+    font-size: 11pt;
+}
+
+.vpAxisLine /* X or Y axis line */
+{
+    shape-rendering: crispEdges;
+    stroke: lightgray;
+    stroke-width: 1;
+}
+
+.vpTickMark 
+{
+    shape-rendering: crispEdges;
+    stroke: gray;
+    stroke-width: 1;
+}
+
+.vpAxisLabel
+{
+    fill: gray;
+    font-size: 12pt;
+}
+
+.vpTickLabel
+{
+    fill: gray;
+    font-size: 11pt;
+}
+
+.vpPlotBg
+{
+    shape-rendering: crispEdges;
+    fill: white;
+}
+
+ .vpGridLine 
+{
+    shape-rendering: crispEdges;
+    stroke: lightgray;
+    stroke-width: 1;
+}
+
+.vpFrameLine 
+{
+    shape-rendering: crispEdges;
+    stroke: gray;
+    stroke-width: 1;
+}
+
+
+
+
+
+.vpNumericAxis		/* container for numeric axis parts */
+{
+}
+
+.vpNumericAxis_axisLine
+{
+	background: gray;    /* don't draw over gridLine border*/
+}
+
+.vpNumericAxis_tickMark
+{
+	background: #808080;
+}
+
+.vpNumericAxis_label
+{
+	color: #808080;
+	fill: #808080;
+    font-size: 1.0em;
+    font-weight: normal;
+}
+
+
+.vpCategoryAxis		/* container for category axis parts */
+{
+}
+
+.vpCategoryAxis_axisLine
+{
+	background: gray;    /* don't draw over gridLine border*/
+}
+
+.vpCategoryAxis_tickMark
+{
+	background: #808080;
+}
+
+.vpCategoryAxis_label
+{
+	color: #808080;
+	fill: #808080;
+    font-size: 1.0em;
+    font-weight: normal;
+	text-wrap: none;
+}
+
+.vpGridLines		/* container for horizontal and vertical grid lines - this is sized to align with the 0-4 axes */
+{
+    border: 1px solid #a0a0a0;
+}
+
+.vpHorizontalGridLine
+{
+    background: black;
+    opacity: .1;
+}
+
+.vpVerticalGridLine
+{
+    background: black;
+    opacity: .1;
+}
+
+.vpVvPlot			/* container for a standard chart (outer most container) */
+{
+	border: 0px #808080 solid;
+	background: #f0f0f0;
+}
+
+.vpPlotBox			/* dock layout container for parts of a chart */
+{
+	background: #f0f0f0;
+}
+
+.vpChartShapes			/* container that holds the bar, circles, text, etc. of the plot */
+{
+	
+}
+
+.vpLineShape
+{
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.chartTitle {
+    color: gray;
+    font-size: 14pt;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: normal;
+	padding-top: 12px;
+	padding-bottom: 8px;
+}
+
+.pvXTitle
+{
+    color: gray;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+	padding: 4px;
+}
+
+.pvYTitle
+{
+    color: gray;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+	padding: 4px;
+}
+
+.legend
+{
+	padding: 20px;
+}
+
+.legendTable
+{
+	border: 1px solid black;
+	background: white;
+}
+
+.legendEntryColor
+{
+	width: 8px;
+	height: 8px;
+	vertical-align: middle;
+}
+
+.legendEntryName
+{
+	color: #303030;
+	padding: 2px;
+	cursor: default;
+}
+
+.hline
+{
+	
+}
+
+.columnShape
+{
+	
+}
+
+.vpPointShape
+{
+}
+
+.toolButton
+{
+	color: white;
+	background: transparent;
+	margin: 0px;
+	padding-left: 4px;
+	padding-right: 4px;
+	cursor: pointer;
+}
+
+.toolButton:hover
+{
+	color: #404040;
+	background: gray;
+}
+
+.toolButton:active
+{
+	color: #404040;
+	background: black;
+}
+
+.vpRibbonBar
+{
+    background: #f0f0f0;
+    border: 1px solid #d0d0d0;
+}
+
+.ribbonGroup
+{
+    border-right: 1px solid gray;
+    background: #f0f0f0;
+	display: inline-table;
+}
+
+.groupButton
+{
+	color: #404040;
+	background: transparent;
+	margin: 0px;
+	padding-left: 4px;
+	padding-right: 4px;
+	cursor: pointer;
+}
+
+.groupButton:hover
+{
+	color: white;
+	background: gray;
+}
+
+.groupButton:active
+{
+	color: white;
+	background: black;
+}
+
+.groupButtonChecked
+{
+	color: white;
+	background: darkgray;
+}
+
+.groupCheckbox
+{
+	color: #808080;
+	background: transparent;
+	margin: 0px;
+	padding-left: 4px;
+	padding-right: 4px;
+	cursor: pointer;
+}
+
+.groupCheckbox:hover
+{
+    color: white;
+	background: gray;
+}
+
+.groupCheckbox:active
+{
+    color: white;
+	background: black;
+}
+
+.groupCheckboxChecked
+{
+	color: #404040;
+    font-style: italic;
+}
+
+.groupCombo
+{
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 1px;
+	background: #f0f0f0;
+	border: solid 1px #d0d0d0;
+	padding-left: 2px;
+	color: #404040;
+}
+
+
+
+.groupText
+{
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 1px;
+	background: #f0f0f0;
+	border: solid 1px #d0d0d0;
+	padding-left: 2px;
+	color: #404040;
+}
+
+.groupText:hover
+{
+	background: white;
+}
+
+.groupText:focus
+{
+	background: white;
+}
+
+
+.ribbonBarRow
+{
+    height: 14px;
+}
+
+.ribbonGroupEntry
+{
+    background: transparent;    
+    min-width: 58px;
+}
+
+.ribbonGroupNameTd
+{
+    height: 25px;
+    text-align: center;
+    vertical-align: bottom;
+	opacity: .4;
+}
+ribbonGroupName
+{
+    vertical-align: bottom;
+}
+
+
+/*--- vuePlot slider control ---*/
+.sliderTrack
+{
+	/*---- "rx" and "ry" cannot be specified here, so they are set in the js code. ---*/
+	fill: white;
+	stroke: gray;
+	stroke-width: 1;
+}
+
+.timeSlicer 
+{
+    border: solid 1px lightgray;
+    background: white;
+    display: inline-block;
+}
+
+.timeSlicerPlay
+{
+    padding-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 2px;
+}
+
+.timeSlicerPlay:hover
+{
+   opacity: .5;
+}
+
+.timeSlicerSlider 
+{
+    padding-left: 12px;
+    padding-top: 6px;
+    padding-bottom: 2px;
+}
+
+.timeSlicerLabel
+{
+    background: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 16px;
+
+    position: relative;
+    left: 10px;
+    top: -10px;
+}
+
+.sliderThumb
+{
+	/*---- "rx" and "ry" cannot be specified here, so they are set in the js code. ---*/
+	fill: white;
+	stroke: gray;
+	stroke-width: 1;
+}
+
+.sliderThumbPlaying
+{
+	/*---- "rx" and "ry" cannot be specified here, so they are set in the js code. ---*/
+	fill: lightGray;
+	stroke: gray;
+	stroke-width: 1;
+}
+
+/*--- vuePlot scrollbar control ---*/
+.scrollTrack
+{
+	/*---- "rx" and "ry" cannot be specified here, so they are set in the js code. ---*/
+	fill: lightgray;
+	stroke-width: 0;
+}
+
+.scrollTrack:active
+{
+	fill: gray;
+}
+
+.scrollThumb
+{
+	/*---- "rx" and "ry" cannot be specified here, so they are set in the js code. ---*/
+	fill: #f0f0f0;
+	stroke: gray;
+	stroke-width: 1;
+}
+
+.scrollThumb:active
+{
+	fill: gray;
+	stroke: #333;
+}
+
+.scrollBox                 /* fill/stroke for RECT in scrollbar box */
+{
+	fill: lightgray;
+	stroke-width: 0;
+}
+
+.scrollBoxShape          /* fill/stroke for TRIANGLE scrollbar box */
+{
+	fill: gray;
+	stroke-width: 0;
+}
+
+.scrollBoxDown          /* fill/stroke for RECT in scrollbar box (when mouse is DOWN) */
+{
+	fill: #999;
+}
+
+.scrollBoxShapeDown      /* fill/stroke for TRIANGLE scrollbar box (when mouse is DOWN) */
+{
+	fill: black;
+}
+
+.scrollLowerRightBox
+{
+    background: lightgray;
+}
+

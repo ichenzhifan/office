@@ -1,0 +1,128 @@
+﻿[
+    {
+        "id": "giant-redwhiteblack",
+        "sku": "peoplebar-giant",
+        "thumbnail": "../PeopleAssets/Themes/giant-redwhiteblack.png",
+        "css": "../PeopleAssets/Themes/giant-redwhiteblack.css"
+    },
+    {
+        "id": "giant-greengrey",
+        "sku": "peoplebar-giant",
+        "thumbnail": "../PeopleAssets/Themes/giant-greengrey.png",
+        "css": "../PeopleAssets/Themes/giant-greengrey.css"
+    },
+    {
+        "id": "giant-roseblue",
+        "sku": "peoplebar-giant",
+        "thumbnail": "../PeopleAssets/Themes/giant-roseblue.png",
+        "css": "../PeopleAssets/Themes/giant-roseblue.css"
+    },
+    {
+        "id": "giant-redwhite",
+        "sku": "peoplebar-giant",
+        "thumbnail": "../PeopleAssets/Themes/giant-redwhite.png",
+        "css": "../PeopleAssets/Themes/giant-redwhite.css"
+    },
+    {
+        "id": "giant-rosewhite",
+        "sku": "peoplebar-giant",
+        "thumbnail": "../PeopleAssets/Themes/giant-rosewhite.png",
+        "css": "../PeopleAssets/Themes/giant-rosewhite.css"
+    },
+    {
+        "id": "giant-whiterose",
+        "sku": "peoplebar-giant",
+        "thumbnail": "../PeopleAssets/Themes/giant-whiterose.png",
+        "css": "../PeopleAssets/Themes/giant-whiterose.css"
+    },
+    {
+        "id": "giant-yellowblue",
+        "sku": "peoplebar-giant",
+        "thumbnail": "../PeopleAssets/Themes/giant-yellowblue.png",
+        "css": "../PeopleAssets/Themes/giant-yellowblue.css"
+    },
+    {
+        "id": "classic-bluewhite",
+        "sku": "peoplebar-classic",
+        "thumbnail": "../PeopleAssets/Themes/classic-bluewhite.png",
+        "css": "../PeopleAssets/Themes/classic-bluewhite.css"
+    },
+    {
+        "id": "classic-redwhite",
+        "sku": "peoplebar-classic",
+        "thumbnail": "../PeopleAssets/Themes/classic-redwhite.png",
+        "css": "../PeopleAssets/Themes/classic-redwhite.css"
+    },
+    {
+        "id": "classic-blackyellow",
+        "sku": "peoplebar-classic",
+        "thumbnail": "../PeopleAssets/Themes/classic-blackyellow.png",
+        "css": "../PeopleAssets/Themes/classic-blackyellow.css"
+    },
+    {
+        "id": "classic-bluegrey",
+        "sku": "peoplebar-classic",
+        "thumbnail": "../PeopleAssets/Themes/classic-bluegrey.png",
+        "css": "../PeopleAssets/Themes/classic-bluegrey.css"
+    },
+    {
+        "id": "classic-greengrey",
+        "sku": "peoplebar-classic",
+        "thumbnail": "../PeopleAssets/Themes/classic-greengrey.png",
+        "css": "../PeopleAssets/Themes/classic-greengrey.css"
+    },
+    {
+        "id": "classic-rosewhite",
+        "sku": "peoplebar-classic",
+        "thumbnail": "../PeopleAssets/Themes/classic-rosewhite.png",
+        "css": "../PeopleAssets/Themes/classic-rosewhite.css"
+    },
+    {
+        "id": "classic-whitered",
+        "sku": "peoplebar-classic",
+        "thumbnail": "../PeopleAssets/Themes/classic-whitered.png",
+        "css": "../PeopleAssets/Themes/classic-whitered.css"
+    },
+    {
+        "id": "callout-blackyellow",
+        "sku": "peoplebar-callout",
+        "thumbnail": "../PeopleAssets/Themes/callout-blackyellow.png",
+        "css": "../PeopleAssets/Themes/callout-blackyellow.css"
+    },
+    {
+        "id": "callout-blackgrey",
+        "sku": "peoplebar-callout",
+        "thumbnail": "../PeopleAssets/Themes/callout-blackgrey.png",
+        "css": "../PeopleAssets/Themes/callout-blackgrey.css"
+    },
+    {
+        "id": "callout-blackgreyred",
+        "sku": "peoplebar-callout",
+        "thumbnail": "../PeopleAssets/Themes/callout-blackgreyred.png",
+        "css": "../PeopleAssets/Themes/callout-blackgreyred.css"
+    },
+    {
+        "id": "callout-blueblack",
+        "sku": "peoplebar-callout",
+        "thumbnail": "../PeopleAssets/Themes/callout-blueblack.png",
+        "css": "../PeopleAssets/Themes/callout-blueblack.css"
+    },
+    {
+        "id": "callout-greengrey",
+        "sku": "peoplebar-callout",
+        "thumbnail": "../PeopleAssets/Themes/callout-greengrey.png",
+        "css": "../PeopleAssets/Themes/callout-greengrey.css"
+    },
+    {
+        "id": "callout-roseblue",
+        "sku": "peoplebar-callout",
+        "thumbnail": "../PeopleAssets/Themes/callout-roseblue.png",
+        "css": "../PeopleAssets/Themes/callout-roseblue.css"
+    },
+    {
+        "id": "callout-whitered",
+        "sku": "peoplebar-callout",
+        "thumbnail": "../PeopleAssets/Themes/callout-whitered.png",
+        "css": "../PeopleAssets/Themes/callout-whitered.css"
+    }
+]

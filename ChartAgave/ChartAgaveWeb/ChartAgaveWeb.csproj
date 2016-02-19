@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D863B21-02C1-4F60-BF66-579F79E56F82}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChartAgaveWeb</RootNamespace>
+    <AssemblyName>ChartAgaveWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44305</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\AgaveBase.css" />
+    <Content Include="Content\HighContrast.css" />
+    <Content Include="Content\PresentationChartAgave.css" />
+    <Content Include="Content\OfficeThemes.css" />
+    <Content Include="Content\RTL.css" />
+    <Content Include="Icons\AreaChart.png" />
+    <Content Include="Icons\Back_ppt.svg" />
+    <Content Include="Icons\back.png" />
+    <Content Include="Icons\Back.svg" />
+    <Content Include="Icons\Back_hover_ppt.svg" />
+    <Content Include="Icons\Back_hover.svg" />
+    <Content Include="Icons\Back_press_ppt.svg" />
+    <Content Include="Icons\Back_press.svg" />
+    <Content Include="Icons\BarChart.png" />
+    <Content Include="Icons\area_regular_type.png" />
+    <Content Include="Icons\bar_regular_type.png" />
+    <Content Include="Icons\chart.png" />
+    <Content Include="Icons\column_regular_type.png" />
+    <Content Include="Icons\data.png" />
+    <Content Include="Icons\Data.svg" />
+    <Content Include="Icons\Data_hover.svg" />
+    <Content Include="Icons\Data_press.svg" />
+    <Content Include="Icons\graph_hover.svg" />
+    <Content Include="Icons\graph_normal.svg" />
+    <Content Include="Icons\graph_press.svg" />
+    <Content Include="Icons\pie_innerradius_type.png" />
+    <Content Include="Icons\pie_regular_type.png" />
+    <Content Include="Icons\area_stacked_type.png" />
+    <Content Include="Icons\bar_stacked_type.png" />
+    <Content Include="Icons\column_stacked_type.png" />
+    <Content Include="Icons\line_type.png" />
+    <Content Include="Icons\DeleteColumns.png" />
+    <Content Include="Icons\DeleteRows.png" />
+    <Content Include="Icons\ColumnChart.png" />
+    <Content Include="Icons\PeopleChart.png" />
+    <Content Include="Icons\LineChart.png" />
+    <Content Include="Icons\PieChart.png" />
+    <Content Include="Icons\rtl\back_excel.svg" />
+    <Content Include="Icons\rtl\back_hover_excel.svg" />
+    <Content Include="Icons\rtl\back_hover_ppt.svg" />
+    <Content Include="Icons\rtl\back_ppt.svg" />
+    <Content Include="Icons\rtl\back_press_excel.svg" />
+    <Content Include="Icons\rtl\back_press_ppt.svg" />
+    <Content Include="Icons\SelectData.png" />
+    <Content Include="Icons\Info.png" />
+    <Content Include="Icons\InsertColumnsLeft.png" />
+    <Content Include="Icons\InsertColumnsRight.png" />
+    <Content Include="Icons\InsertRowsAbove.png" />
+    <Content Include="Icons\InsertRowsBelow.png" />
+    <Content Include="Icons\setting.png" />
+    <Content Include="Icons\Setting.svg" />
+    <Content Include="Icons\Setting_hover.svg" />
+    <Content Include="Icons\Setting_press.svg" />
+    <Content Include="Icons\ShowColumnHeaders.png" />
+    <Content Include="Icons\ShowRowHeaders.png" />
+    <Content Include="Icons\peoplebar-giant.png" />
+    <Content Include="Icons\warning.png" />
+    <Content Include="PeopleAssets\Layouts\Layouts.json" />
+    <None Include="Resources\en\resources.json" />
+    <Content Include="Scripts\d3.v3.min.js" />
+    <Content Include="Scripts\OfficeAgave.Shared.js" />
+    <Content Include="Scripts\OfficeThemeManager.js" />
+    <Content Include="Scripts\PeopleGraph.js" />
+    <Content Include="PeopleAssets\Shapes\shapes.json" />
+    <Content Include="PeopleAssets\Themes\themes.json" />
+    <Content Include="Resources\zh-CN\resources.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\ExcelChartAgave.css" />
+    <Content Include="App\ChartAgave.html" />
+    <Content Include="App\Page\ChartType\ChartTypePage.html" />
+    <Content Include="App\Page\Chart\ChartPage.html" />
+    <Content Include="App\Page\Data\DataPage.html" />
+    <Content Include="Content\Office.css" />
+    <Content Include="Content\PeopleGraph.css" />
+    <Content Include="Content\Switch.css" />
+    <Content Include="Content\vuePlot.css" />
+    <Content Include="Icons\insert_column_left_active.png" />
+    <Content Include="Icons\insert_column_left_rest.png" />
+    <Content Include="Icons\insert_column_right_active.png" />
+    <Content Include="Icons\insert_column_right_rest.png" />
+    <Content Include="Icons\insert_row_above_active.png" />
+    <Content Include="Icons\insert_row_above_rest.png" />
+    <Content Include="Icons\insert_row_below_active.png" />
+    <Content Include="Icons\insert_row_below_rest.png" />
+    <Content Include="Icons\people_type.png" />
+    <Content Include="packages.config" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\_references.js" />
+    <None Include="Scripts\Office\1.1\office-vsdoc.js" />
+    <Content Include="Scripts\Office\1.1\access-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\access-web-16.00.js" />
+    <Content Include="Scripts\Office\1.1\ar-sa\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ar-sa\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\ar-sa\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ar-sa\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\bg-bg\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\bg-bg\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\bg-bg\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\bg-bg\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\cs-cz\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\cs-cz\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\cs-cz\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\cs-cz\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\da-dk\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\da-dk\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\da-dk\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\da-dk\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\de-de\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\de-de\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\de-de\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\de-de\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\el-gr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\el-gr\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\el-gr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\el-gr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\en-us\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\en-us\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\en-us\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\en-us\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\es-es\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\es-es\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\es-es\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\es-es\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\et-ee\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\et-ee\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\et-ee\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\et-ee\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\excel-15.01.debug.js" />
+    <Content Include="Scripts\Office\1.1\excel-15.01.js" />
+    <Content Include="Scripts\Office\1.1\excel-15.debug.js" />
+    <Content Include="Scripts\Office\1.1\excel-15.js" />
+    <Content Include="Scripts\Office\1.1\excel-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\excel-web-16.00.js" />
+    <Content Include="Scripts\Office\1.1\excel-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\excel-win32-16.00.js" />
+    <Content Include="Scripts\Office\1.1\excelwebapp-15.01.debug.js" />
+    <Content Include="Scripts\Office\1.1\excelwebapp-15.01.js" />
+    <Content Include="Scripts\Office\1.1\excelwebapp-15.debug.js" />
+    <Content Include="Scripts\Office\1.1\excelwebapp-15.js" />
+    <Content Include="Scripts\Office\1.1\fi-fi\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\fi-fi\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\fi-fi\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\fi-fi\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\fr-fr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\fr-fr\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\fr-fr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\fr-fr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\he-il\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\he-il\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\he-il\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\he-il\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\hi-in\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\hi-in\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\hi-in\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\hi-in\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\hr-hr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\hr-hr\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\hr-hr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\hr-hr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\hu-hu\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\hu-hu\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\hu-hu\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\hu-hu\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\id-id\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\id-id\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\id-id\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\id-id\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\it-it\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\it-it\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\it-it\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\it-it\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\ja-jp\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ja-jp\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\ja-jp\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ja-jp\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\kk-kz\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\kk-kz\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\kk-kz\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\kk-kz\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\ko-kr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ko-kr\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\ko-kr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ko-kr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\lt-lt\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\lt-lt\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\lt-lt\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\lt-lt\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\lv-lv\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\lv-lv\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\lv-lv\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\lv-lv\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\ms-my\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ms-my\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\ms-my\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ms-my\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\nb-no\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\nb-no\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\nb-no\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\nb-no\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\nl-nl\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\nl-nl\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\nl-nl\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\nl-nl\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\o15apptofilemappingtable.debug.js" />
+    <Content Include="Scripts\Office\1.1\o15apptofilemappingtable.js" />
+    <Content Include="Scripts\Office\1.1\office.debug.js" />
+    <Content Include="Scripts\Office\1.1\office.js" />
+    <Content Include="Scripts\Office\1.1\OfficeThemes.css" />
+    <Content Include="Scripts\Office\1.1\outlook-15.01.debug.js" />
+    <Content Include="Scripts\Office\1.1\outlook-15.01.js" />
+    <Content Include="Scripts\Office\1.1\outlook-15.debug.js" />
+    <Content Include="Scripts\Office\1.1\outlook-15.js" />
+    <Content Include="Scripts\Office\1.1\outlook-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\outlook-web-16.00.js" />
+    <Content Include="Scripts\Office\1.1\outlook-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\outlook-win32-16.00.js" />
+    <None Include="Scripts\Office\1.1\outlook-win32.debug-vsdoc.js" />
+    <Content Include="Scripts\Office\1.1\outlookwebapp-15.01.debug.js" />
+    <Content Include="Scripts\Office\1.1\outlookwebapp-15.01.js" />
+    <Content Include="Scripts\Office\1.1\outlookwebapp-15.debug.js" />
+    <Content Include="Scripts\Office\1.1\outlookwebapp-15.js" />
+    <Content Include="Scripts\Office\1.1\pl-pl\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\pl-pl\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\pl-pl\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\pl-pl\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\powerpoint-15.01.debug.js" />
+    <Content Include="Scripts\Office\1.1\powerpoint-15.01.js" />
+    <Content Include="Scripts\Office\1.1\powerpoint-15.debug.js" />
+    <Content Include="Scripts\Office\1.1\powerpoint-15.js" />
+    <Content Include="Scripts\Office\1.1\powerpoint-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\powerpoint-web-16.00.js" />
+    <Content Include="Scripts\Office\1.1\powerpoint-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\powerpoint-win32-16.00.js" />
+    <Content Include="Scripts\Office\1.1\project-15.01.debug.js" />
+    <Content Include="Scripts\Office\1.1\project-15.01.js" />
+    <Content Include="Scripts\Office\1.1\project-15.debug.js" />
+    <Content Include="Scripts\Office\1.1\project-15.js" />
+    <Content Include="Scripts\Office\1.1\project-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\project-win32-16.00.js" />
+    <Content Include="Scripts\Office\1.1\pt-br\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\pt-br\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\pt-br\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\pt-br\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\pt-pt\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\pt-pt\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\pt-pt\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\pt-pt\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\ro-ro\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ro-ro\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\ro-ro\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ro-ro\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\ru-ru\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ru-ru\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\ru-ru\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\ru-ru\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\sk-sk\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\sk-sk\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\sk-sk\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\sk-sk\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\sl-si\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\sl-si\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\sl-si\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\sl-si\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\sr-latn-cs\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\sr-latn-cs\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\sr-latn-cs\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\sr-latn-cs\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\sv-se\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\sv-se\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\sv-se\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\sv-se\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\th-th\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\th-th\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\th-th\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\th-th\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\tr-tr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\tr-tr\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\tr-tr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\tr-tr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\uk-ua\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\uk-ua\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\uk-ua\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\uk-ua\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\vi-vn\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\vi-vn\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\vi-vn\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\vi-vn\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\word-15.01.debug.js" />
+    <Content Include="Scripts\Office\1.1\word-15.01.js" />
+    <Content Include="Scripts\Office\1.1\word-15.debug.js" />
+    <Content Include="Scripts\Office\1.1\word-15.js" />
+    <Content Include="Scripts\Office\1.1\word-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1.1\word-win32-16.00.js" />
+    <Content Include="Scripts\Office\1.1\zh-cn\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\zh-cn\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\zh-cn\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\zh-cn\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.1\zh-tw\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\zh-tw\office_strings.js" />
+    <Content Include="Scripts\Office\1.1\zh-tw\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.1\zh-tw\outlook_strings.js" />
+    <Content Include="Scripts\Office\metadata\endpoints.xml" />
+    <Content Include="Scripts\Office\metadata\features.xml" />
+    <Content Include="Scripts\Office\MicrosoftAjax.js" />
+    <Content Include="Scripts\Office\Themes\OfficeThemes.css" />
+    <Content Include="Scripts\vuePlot.js" />
+    <Content Include="Scripts\_officeintellisense.js" />
+    <Content Include="PeopleAssets\Shapes\box.png" />
+    <Content Include="PeopleAssets\Shapes\chi-pao.png" />
+    <Content Include="PeopleAssets\Shapes\clock.png" />
+    <Content Include="PeopleAssets\Shapes\cloth.png" />
+    <Content Include="PeopleAssets\Shapes\dance-people.png" />
+    <Content Include="PeopleAssets\Shapes\diamond.png" />
+    <Content Include="PeopleAssets\Shapes\dolphin.png" />
+    <Content Include="PeopleAssets\Shapes\dress.png" />
+    <Content Include="PeopleAssets\Shapes\heart.png" />
+    <Content Include="PeopleAssets\Shapes\laptop.png" />
+    <Content Include="PeopleAssets\Shapes\moneybag.png" />
+    <Content Include="PeopleAssets\Shapes\muscle-people.png" />
+    <Content Include="PeopleAssets\Shapes\smile-people.png" />
+    <Content Include="PeopleAssets\Shapes\stand-people.png" />
+    <Content Include="PeopleAssets\Shapes\star.png" />
+    <Content Include="PeopleAssets\Shapes\watch.png" />
+    <Content Include="PeopleAssets\SKUs\peoplebar-callout.png" />
+    <Content Include="PeopleAssets\SKUs\peoplebar-classic.png" />
+    <Content Include="PeopleAssets\SKUs\peoplebar-giant.png" />
+    <Content Include="PeopleAssets\Themes\callout-blackgrey.css" />
+    <Content Include="PeopleAssets\Themes\callout-blackgrey.png" />
+    <Content Include="PeopleAssets\Themes\callout-blackgreyred.css" />
+    <Content Include="PeopleAssets\Themes\callout-blackgreyred.png" />
+    <Content Include="PeopleAssets\Themes\callout-blackyellow.css" />
+    <Content Include="PeopleAssets\Themes\callout-blackyellow.png" />
+    <Content Include="PeopleAssets\Themes\callout-blueblack.css" />
+    <Content Include="PeopleAssets\Themes\callout-blueblack.png" />
+    <Content Include="PeopleAssets\Themes\callout-greengrey.css" />
+    <Content Include="PeopleAssets\Themes\callout-greengrey.png" />
+    <Content Include="PeopleAssets\Themes\callout-roseblue.css" />
+    <Content Include="PeopleAssets\Themes\callout-roseblue.png" />
+    <Content Include="PeopleAssets\Themes\callout-whitered.css" />
+    <Content Include="PeopleAssets\Themes\callout-whitered.png" />
+    <Content Include="PeopleAssets\Themes\classic-blackyellow.css" />
+    <Content Include="PeopleAssets\Themes\classic-blackyellow.png" />
+    <Content Include="PeopleAssets\Themes\classic-bluegrey.css" />
+    <Content Include="PeopleAssets\Themes\classic-bluegrey.png" />
+    <Content Include="PeopleAssets\Themes\classic-bluewhite.css" />
+    <Content Include="PeopleAssets\Themes\classic-bluewhite.png" />
+    <Content Include="PeopleAssets\Themes\classic-greengrey.css" />
+    <Content Include="PeopleAssets\Themes\classic-greengrey.png" />
+    <Content Include="PeopleAssets\Themes\classic-redwhite.css" />
+    <Content Include="PeopleAssets\Themes\classic-redwhite.png" />
+    <Content Include="PeopleAssets\Themes\classic-rosewhite.css" />
+    <Content Include="PeopleAssets\Themes\classic-rosewhite.png" />
+    <Content Include="PeopleAssets\Themes\classic-whitered.css" />
+    <Content Include="PeopleAssets\Themes\classic-whitered.png" />
+    <Content Include="PeopleAssets\Themes\giant-greengrey.css" />
+    <Content Include="PeopleAssets\Themes\giant-greengrey.png" />
+    <Content Include="PeopleAssets\Themes\giant-redwhite.css" />
+    <Content Include="PeopleAssets\Themes\giant-redwhite.png" />
+    <Content Include="PeopleAssets\Themes\giant-redwhiteblack.css" />
+    <Content Include="PeopleAssets\Themes\giant-redwhiteblack.png" />
+    <Content Include="PeopleAssets\Themes\giant-roseblue.css" />
+    <Content Include="PeopleAssets\Themes\giant-roseblue.png" />
+    <Content Include="PeopleAssets\Themes\giant-rosewhite.css" />
+    <Content Include="PeopleAssets\Themes\giant-rosewhite.png" />
+    <Content Include="PeopleAssets\Themes\giant-whiterose.css" />
+    <Content Include="PeopleAssets\Themes\giant-whiterose.png" />
+    <Content Include="PeopleAssets\Themes\giant-yellowblue.css" />
+    <Content Include="PeopleAssets\Themes\giant-yellowblue.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="App\ChartAgave.ts" />
+    <TypeScriptCompile Include="App\Core\CopyPaste.ts" />
+    <TypeScriptCompile Include="App\Core\SheetClip.ts" />
+    <TypeScriptCompile Include="App\Core\TableSelection.ts" />
+    <TypeScriptCompile Include="App\Core\PeopleChart.ts" />
+    <TypeScriptCompile Include="App\Core\PeopleChartOptions.ts" />
+    <TypeScriptCompile Include="App\Core\TextLayerOption.ts" />
+    <TypeScriptCompile Include="App\Core\ChartData.ts" />
+    <TypeScriptCompile Include="App\Core\AgaveTheme.ts" />
+    <TypeScriptCompile Include="App\Helper\AccessibilityHelper.ts" />
+    <TypeScriptCompile Include="App\Helper\AgaveHelper.ts" />
+    <TypeScriptCompile Include="App\Helper\ChartTableHelper.ts" />
+    <TypeScriptCompile Include="App\Helper\ControlHelper.ts" />
+    <TypeScriptCompile Include="App\Control\SettingsControl.ts" />
+    <TypeScriptCompile Include="App\Control\SwitchControl.ts" />
+    <TypeScriptCompile Include="App\Control\TabControl.ts" />
+    <TypeScriptCompile Include="App\Control\ToolbarControl.ts" />
+    <TypeScriptCompile Include="App\Core\Chart.ts" />
+    <TypeScriptCompile Include="App\Core\AgaveEnums.ts" />
+    <TypeScriptCompile Include="App\Core\ChartOptions.ts" />
+    <TypeScriptCompile Include="App\Core\ChartSettings.ts" />
+    <TypeScriptCompile Include="App\Core\ObjectExtension.ts" />
+    <TypeScriptCompile Include="App\Core\SettingOptions.ts" />
+    <TypeScriptCompile Include="App\Core\StringExtension.ts" />
+    <TypeScriptCompile Include="App\Core\Strings.ts" />
+    <TypeScriptCompile Include="App\Helper\KeyboardHelper.ts" />
+    <TypeScriptCompile Include="App\Page\ChartType\ChartTypePage.ts" />
+    <TypeScriptCompile Include="App\Helper\ChartHelper.ts" />
+    <TypeScriptCompile Include="App\Page\Chart\ChartPage.ts" />
+    <TypeScriptCompile Include="App\Core\ChartTable.ts" />
+    <TypeScriptCompile Include="App\Page\Data\DataPage.ts" />
+    <TypeScriptCompile Include="App\Helper\PageHelper.ts" />
+    <TypeScriptCompile Include="App\Core\DataSelection.ts" />
+    <TypeScriptCompile Include="Scripts\typings\OfficeAgave.Shared.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\PeopleGraph.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\Office.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\vuePlot.d.ts" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>38339</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:37532/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptOutFile>App/ChartAgave.js</TypeScriptOutFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptOutFile>App/ChartAgave.js</TypeScriptOutFile>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

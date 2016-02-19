@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\ChartAgaveManifest.xml
+E:\Covidien\Projects\wicresoft\Offices\Dev\ChartAgave\ChartAgave\bin\Debug\ChartAgave.debugapp

@@ -1,0 +1,194 @@
+﻿
+/*********Begin tool bar***********/
+.topBanner {
+	margin: 24px 24px 0px 0px;
+}
+
+	.topBanner .backBtn {
+		float: right;
+		margin: 0px 0px 0px 10px;
+	}
+
+	.topBanner .title {
+		float: right;
+	}
+/**********End tool bar**********/
+
+
+/********Begin setting pane*********/
+#toolbar {
+	/*padding-left:20px;*/
+	width: auto;
+}
+
+	#toolbar div {
+		float: left;
+		padding-top: 3px;
+	}
+
+.circle {
+	float: left;
+}
+
+#settingsBackButton{
+    margin: 0px -24px 0px 10px;
+}
+
+/********End setting pane*********/
+
+/******Begin chart page************/
+.custom-Legend {
+	padding: 24px 24px 24px 0px;
+}
+
+.legend-Entry{
+    margin: 0px 0px 0px 22px;
+}
+.color-Square {
+	margin: 0px 0px 0px 8px;
+}
+
+.series-Name {
+	/*margin: 0px 0px 0px 22px;*/
+}
+
+.chart-ele-padding{
+    padding:0px 24px;
+}
+/******End chart page************/
+
+
+/******Begin chart type page*********/
+.chartType-thumbnail-name {
+	left: 0px;
+	right: auto;
+    text-align:left;
+}
+
+ul.chartType-nav-ul {
+	/*margin: 0px 15px 0px 0px;*/
+}
+
+.chartType-panel {
+	padding: 0px 15px;
+}
+
+.bottom-Bar {
+	left: 0px;
+}
+
+	.bottom-Bar > .blueBtn {
+		float: left;
+	}
+/******End chart type page*********/
+
+/******Begin data page*********/
+#tableToolbar {
+	float: right;
+	padding-right: 50px;
+}
+
+	#tableToolbar div, #tableToolbar img {
+		float: right;
+	}
+
+#tableFrame {
+	padding: 60px 60px 5px 10px;
+}
+
+#selectAll {
+	right: -23px;
+}
+
+.vertical-select-grip {
+	right: -23px;
+}
+
+	.vertical-select-grip .thick {
+		float: right;
+	}
+
+	.vertical-select-grip .thin {
+		float: right;
+	}
+
+.vertical-select-grip-selected {
+	right: -23px;
+}
+
+.insert-row-icon {
+	right: -55px;
+	transform: scaleX(-1);
+}
+
+.editingInput {
+	overflow-y: hidden;
+	box-shadow: -1px 2px 5px rgba(0,0,0, 0.4);
+	-webkit-box-shadow: -1px 2px 5px rgba(0,0,0, 0.4);
+}
+
+.cell-category {
+	border-left: 1px solid #5b9bd5;
+	border-right: none;
+}
+
+.cell-first-series {
+	border-right: 1px solid #ed7d31 !important;
+	border-left: none;
+}
+
+.cell-last-series {
+	border-left: 1px solid #ed7d31 !important;
+	border-right: none;
+}
+
+.cell-right-boundary {
+	border-left: 1px solid #80b65b;
+	border-right: none;
+}
+
+#tableFramePopup{
+    left: auto;
+    right: 36px;
+}
+
+#tableFramePopupDiv2{
+    float:left;
+}
+
+#tableFramePopupDiv2 input{
+    margin:0px 25px;
+}
+
+/******End data page*********/
+
+/*******Begin data selection*******/
+#selectDataDiv {
+	padding-right: 20px;
+}
+
+#selectdatadiv_bottom {
+	float: left;
+}
+/********End data selection*************/
+
+/*********Begin people chart *******/
+
+.notification-text {
+	float: right;
+	margin-left: 25px;
+	margin-right: 15px;
+}
+
+.notification-close {
+	float: left;
+	left: 10px;
+}
+
+.notification-button {
+	float: left;
+	left: 24px;
+	right: auto;
+}
+/*********End people chart *******/
+
